@@ -1,7 +1,7 @@
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-import termcolor 
+ 
 import os
 
 
@@ -55,7 +55,7 @@ try:
         # Send the email
         
         server.sendmail(sender_email, receiver_email, text)
-        print(termcolor.colored("[{}] Email successfully sent  ".format(i) + "To {}".format(receiver_email), 'red'))
+        print("[{}] Email successfully sent  ".format(i) + "To {}".format(receiver_email))
 
 except Exception as e:
     print(f"Failed to send email. Error: {e}")
